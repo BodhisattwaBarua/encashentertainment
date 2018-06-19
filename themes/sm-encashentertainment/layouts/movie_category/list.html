@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      {{ partial "page_title.html" . }}
+    </div>
+  </div>
+</section>
+<div class="container is-fullhd ">
+  <div class="columns">
+    <div class="column is-two-thirds" data-aos="slide-right">
+    {{ partial "movie_list.html" . }}
+    </div>
+    <div class="column" data-aos="slide-left">
+    {{ partial "movie-menu-contextual.html" . }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

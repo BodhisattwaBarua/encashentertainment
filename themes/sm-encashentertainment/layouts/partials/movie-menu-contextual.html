@@ -1,0 +1,37 @@
+{{/* Get the current page's URL so we can compare it to the list below */}}
+{{ $currentPageUrl := .URL }}
+{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
+{{ $required_section := .Section }}
+{{ $required_parent := .Parent }}
+{{ $currentSection := ( index .Site.Pages ) }}
+{{ $all_pages := .Site.Pages }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<section class="section">
+	<div class="container is-fullhd">
+		<div class="movie-row">
+		<a href="/movies" class="is-uppercase has-text-black is-marginless
+		has-text-weight-bold has-text-primary is-size-3">Movies</a>
+	</div>
+		{{ range $currentSection }}
+		{{if eq .Parent $required_parent }}
+		{{ $required_title := .Title }}
+		<div class="has-text-black movie-list-row">
+			<span class="columns is-mobile is-variable is-1">
+				<span class="column">
+					<div class="columns is-mobile is-gapless is-marginless">
+						<a href="{{ .URL }}" class=" column
+						sidelink{{ if eq $currentPageUrl .URL }} active{{end}}">
+						{{ $required_title }}</a>
+					</div>
+				</span>
+			</span>
+		</div>
+		{{ end }}
+		{{ end }}
+		
+	</div>
+</section>
+{{ end }}

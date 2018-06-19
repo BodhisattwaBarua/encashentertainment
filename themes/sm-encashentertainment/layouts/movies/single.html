@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      {{ partial "page_title.html" . }}
+    </div>
+  </div>
+</section>
+<div class="container is-fullhd ">
+  <div class="columns">
+    <div class="column is-two-thirds" data-aos="slide-right">
+      <section class="section">
+        <figure class="image is-3by2">
+          <img src="{{ (trim .Params.featured_image "/") | absURL }}">
+        </figure>
+        {{ .Content }}
+      </section>
+    </div>
+    <div class="column" data-aos="slide-left">
+      {{ partial "movie-menu-single.html" . }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>{{.Title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Open+Sans:400,700" rel="stylesheet">
+    <link href="{{ "css/main.css" | absURL }}" rel="stylesheet" type="text/css" />
+    <link href="{{ "css/animate.min.css" | absURL }}" rel="stylesheet" type="text/css" />
+    <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="{{ "js/aos.js" | absURL }}"></script>
+  </head>
+  <body class="has-navbar-fixed-top" style="">
+    <header>
+      <nav class="navbar is-black is-fixed-top">
+        <div class="container is-fluid">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}"
+              width="112" style="max-height:50px;" >
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </div>
+          </div>
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="/">Home</a>
+              <a class="navbar-item" href="/about">About</a>
+              <a class="navbar-item" href="/movies">Movies</a>
+              <a class="navbar-item" href="/gallery">Gallery</a>
+              <a class="navbar-item" href="/news">News</a>
+              <a class="navbar-item" href="/studio">Studio</a>
+              <a class="navbar-item" href="/notice">Notice</a>
+             <!-- <div class="navbar-item has-dropdown is-hoverable">
+               <a class="navbar-link" href="/movies">Movies</a>
+               <div class="navbar-dropdown is-boxed">
+                 <a class="navbar-item" href="/">
+                   Latest Releases
+                 </a>
+                 <a class="navbar-item" href="/">
+                   On Floor
+                 </a>
+                 <a class="navbar-item" href="/">
+                   Our Releases
+                 </a>
+                 <a class="navbar-item" href="/">
+                   Upcoming Releases
+                 </a>
+               </div>
+             </div> -->
+              <a class="navbar-item" href="/goal">Goal</a>
+              <a class="navbar-item" href="/opportunities">Opportunities</a>
+              <a class="navbar-item" href="/contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Get all "navbar-burger" elements
+    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+    $el.addEventListener('click', function () {
+    // Get the target from the "data-target" attribute
+    var target = $el.dataset.target;
+    var $target = document.getElementById(target);
+    // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+    $el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+    });
+    });
+    }
+    });
+
+    AOS.init({
+  duration: 600,
+  });
+    </script>

@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<section class="hero is-primary">
+	<div class="hero-body">
+		<div class="container">
+			{{ partial "page_title.html" . }}
+		</div>
+	</div>
+</section>
+<section class="hero">
+	<div class="columns">
+		<div class="column" data-aos="slide-right">
+			<figure class="image is-1by1 image-on-about-page" >
+				<img  class="" src="{{(trim .Params.creative_image "/") | absURL }}">
+			</figure>
+		</div>
+		<div class="column" data-aos="slide-left">
+			<section class="section">
+				{{ .Content }}
+			</section>
+		</div>
+	</div>
+</section>
+{{ partial "footer.html" . }}

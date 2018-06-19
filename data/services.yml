@@ -1,0 +1,13 @@
+services:
+  - name: Performance Increase
+    image: images/1.jpg
+    content: Enabling companies to grow revenue, improve margins and reposition quickly.
+  - name: Customer Marketing
+    image: images/2.jpg
+    content: In-depth customer insights combined with economic and operational fundamentals.
+  - name: Innovative Technology
+    image: images/3.jpg
+    content: Realizing the full potential of IT resources, investments and assets.
+  - name: Full Transformation
+    image: images/4.jpg
+    content: A cross-functional effort to alter the financial, operational and strategic trajectory of a business.

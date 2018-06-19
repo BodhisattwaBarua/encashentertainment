@@ -1,0 +1,27 @@
+{{ $currentSection := (.Sections) }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<section class="section">
+	<div class="columns is-multiline">
+		{{ range $currentSection }}
+		<a href="{{.URL}}" class="column is-one-third">
+			<div class="card is-shady">
+				<div class="card-image">
+					<figure class="image is-4by3">
+						<img src="{{(trim .Params.featured_image "/") | absURL }}">
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="content">
+						<h4 class="has-text-primary has-text-centered is-uppercase">
+						{{ .Title }} </h4>
+					</div>
+				</div>
+			</div>
+		</a>
+		{{ end }}
+	</div>
+</section>
+{{ end }}

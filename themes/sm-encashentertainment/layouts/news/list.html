@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      {{ partial "page_title.html" . }}
+    </div>
+  </div>
+</section>
+{{ partial "news-menu.html" . }}
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <div class="columns ">
+      <div class="column is-5" data-aos="zoom-in">
+        <figure class="image is-4by3">
+          <img style="padding: 5px;border: 1px solid #ccc;" src="{{ (trim .Params.featured_image "/") | absURL }}">
+        </figure>
+      </div>
+      <div class="column is-6 is-offset-1" data-aos="slide-left">
+        <section class="section">
+          <h2 class="has-text-justified">
+          {{ .Content }}
+          </h2>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
