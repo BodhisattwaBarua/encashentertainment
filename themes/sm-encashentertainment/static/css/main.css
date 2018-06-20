@@ -159,4 +159,52 @@ body, *{
     transform: translateY(-4px);
     color: inherit;
 }
+@media only screen and (max-width: 768px) {
+    
+  .image-on-about-page{
+  clip-path: polygon(
+	    0 0, /* left top */
+	    100% 0, /* right top */
+	    100% 100%, /* right bottom */
+	    0 100% /* left bottom */
+	    );
+	}
+}
+
+.square{
+        position: relative;
+        overflow: hidden;
+      }
+      .square:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 100%;
+      }
+      .square > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.5s;
+      }
+      .square > .content:hover {
+        transform: scale(1.2);
+      }
+      .border-bottom{
+        border-bottom: solid #dbdbdb 1px;
+      }
+      .title:after{
+        content: "";
+        display: block;
+        background-color: red;
+        height: 0.15em;
+        width: 2em;
+        margin-top: 0.25em;
+        margin-bottom: 1.5em;
+      }
+      .mb-std{
+        margin-bottom: 2em !important;
+      }
 
