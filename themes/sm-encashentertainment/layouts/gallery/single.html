@@ -1,4 +1,11 @@
 {{ partial "header.html" . }}
+<section class="hero is-primary">
+	<div class="hero-body">
+		<div class="container">
+			{{ partial "page_title.html" . }}
+		</div>
+	</div>
+</section>
 <link href='{{ "dist/bb.min.css" | absURL}}' rel="stylesheet"/>
 <script type="text/javascript" src='{{ "dist/bb.min.js" | absURL}}'></script>
 <section class="section">
@@ -10,7 +17,7 @@
         <li class="is-active"><a href="#" aria-current="page">{{ .Title }}</a></li>
       </ul>
     </nav>
-    <h1 class="title is-size-1">{{ .Title }}</h1>
+    <!-- <h1 class="title is-size-1">{{ .Title }}</h1> -->
     <div class="columns is-multiline gallery mb-std">
       {{ range .Params.images }}
       <div class="column is-one-quarter">

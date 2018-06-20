@@ -1,7 +1,14 @@
 {{ partial "header.html" . }}
+<section class="hero is-primary">
+	<div class="hero-body">
+		<div class="container">
+			{{ partial "page_title.html" . }}
+		</div>
+	</div>
+</section>
 <section class="section">
   <div class="container">
-    <h1 class="title is-spaced is-size-1">{{ .Title }}</h1>
+    <!-- <h1 class="title is-spaced is-size-1">{{ .Title }}</h1> -->
     {{ $section := where .Data.Pages "Section" .Section }}
     <div class="columns is-multiline">
       {{ range $section }}

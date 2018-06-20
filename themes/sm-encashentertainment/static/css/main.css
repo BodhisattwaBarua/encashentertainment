@@ -195,16 +195,5 @@ body, *{
       .border-bottom{
         border-bottom: solid #dbdbdb 1px;
       }
-      .title:after{
-        content: "";
-        display: block;
-        background-color: red;
-        height: 0.15em;
-        width: 2em;
-        margin-top: 0.25em;
-        margin-bottom: 1.5em;
-      }
-      .mb-std{
-        margin-bottom: 2em !important;
-      }
+      
 
