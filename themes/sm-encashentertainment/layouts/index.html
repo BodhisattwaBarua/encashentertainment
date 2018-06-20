@@ -10,34 +10,32 @@
 	{{ end }}
 </section>
 <section class="section">
-<div class="container is-fluid">
-	<h1 class="title has-text-centered is-uppercase is-size-1">
-	our services
-	</h1>
-	{{ .Content }}
-	<div class="columns" style="padding-top: 10px;">
-		{{ range .Site.Data.services.services }}
-		<div class="column is-one-quarter">
-			<div class="card is-storyworld">
-				<div class="card-image">
-					<figure class="image is-4by3">
-						<img src="{{(trim .image "/") | absURL }}">
-					</figure>
-				</div>
-				<div class="columns">
-					<div class="column">
-						<p class="notification is-size-6 has-text-black
-						has-text-justified is-uppercase">{{ .name }}</p>
+	<div class="container is-fluid">
+		<h1 class="title has-text-centered is-uppercase is-size-1">
+		our services
+		</h1>
+		{{ .Content }}
+		<div class="columns" style="padding-top: 10px;">
+			{{ range .Site.Data.services.services }}
+			<div class="column is-one-quarter">
+				<div class="card is-storyworld">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img src="{{(trim .image "/") | absURL }}">
+						</figure>
+					</div>
+					<div>
+						<p class="notification is-size-5 has-text-black has-text-centered
+						is-uppercase has-text-weight-bold">{{ .name }}</p>
+					</div>
+					<div class="card-content">
+						<p class=" is-size-6 has-text-black">{{ .content }}</p>
 					</div>
 				</div>
-				<div class="card-content">
-					<p class=" is-size-6 has-text-black">{{ .content }}</p>
-				</div>
 			</div>
+			{{ end }}
 		</div>
-		{{ end }}
 	</div>
-</div>
 </section>
 {{ partial "footer.html" . }}
 <script>

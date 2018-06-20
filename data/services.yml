@@ -1,13 +1,13 @@
 services:
-  - name: Performance Increase
+  - name: Movies
     image: images/1.jpg
-    content: Enabling companies to grow revenue, improve margins and reposition quickly.
-  - name: Customer Marketing
+    content: Encash Entertainment is a division of Encash Group. Director Shri Sachet Saraf had a passion about entertainment sector.
+  - name: graphics
     image: images/2.jpg
-    content: In-depth customer insights combined with economic and operational fundamentals.
-  - name: Innovative Technology
+    content: Encash Entertainment is a division of Encash Group. Director Shri Sachet Saraf had a passion about entertainment sector.
+  - name: VFX
     image: images/3.jpg
-    content: Realizing the full potential of IT resources, investments and assets.
-  - name: Full Transformation
+    content: Encash Entertainment is a division of Encash Group. Director Shri Sachet Saraf had a passion about entertainment sector.
+  - name: Animation
     image: images/4.jpg
-    content: A cross-functional effort to alter the financial, operational and strategic trajectory of a business.
+    content: Encash Entertainment is a division of Encash Group. Director Shri Sachet Saraf had a passion about entertainment sector
