@@ -33,28 +33,54 @@
             <div class="navbar-end">
               <a class="navbar-item" href="/">Home</a>
               <a class="navbar-item" href="/about">About</a>
-              <a class="navbar-item" href="/movies">Movies</a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="/movies">Movies</a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item" href="/movies/latest_releases">
+                    Latest Releases
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/movies/on_floor">
+                    On Floor
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/movies/our_releases">
+                    Our Releases
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/movies/upcoming_releases">
+                    Upcoming Releases
+                  </a>
+                </div>
+              </div>
               <a class="navbar-item" href="/gallery">Gallery</a>
               <a class="navbar-item" href="/news">News</a>
               <a class="navbar-item" href="/studio">Studio</a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="/investors">Investors</a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item" href="/investors/financial_reports">
+                    Financial Reports
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/investors/investor_calendar">
+                    Investor Calendar
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/investors/outcome">
+                    Outcome
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/investors/policies_code">
+                    Policies Code
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="/investors/shareholder_services">
+                    Shareholder Services
+                  </a>
+                </div>
+              </div>
               <a class="navbar-item" href="/notice">Notice</a>
-             <!-- <div class="navbar-item has-dropdown is-hoverable">
-               <a class="navbar-link" href="/movies">Movies</a>
-               <div class="navbar-dropdown is-boxed">
-                 <a class="navbar-item" href="/">
-                   Latest Releases
-                 </a>
-                 <a class="navbar-item" href="/">
-                   On Floor
-                 </a>
-                 <a class="navbar-item" href="/">
-                   Our Releases
-                 </a>
-                 <a class="navbar-item" href="/">
-                   Upcoming Releases
-                 </a>
-               </div>
-             </div> -->
               <a class="navbar-item" href="/goal">Goal</a>
               <a class="navbar-item" href="/opportunities">Opportunities</a>
               <a class="navbar-item" href="/contact">Contact</a>
@@ -82,8 +108,7 @@
     });
     }
     });
-
     AOS.init({
-  duration: 600,
-  });
+    duration: 600,
+    });
     </script>
