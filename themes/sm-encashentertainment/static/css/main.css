@@ -99,6 +99,17 @@ body, *{
     color: hsl(171, 100%, 41%);
     border-bottom-color: hsl(171, 100%, 41%);
  	}
+.newslinksample
+ {
+ 	text-decoration: none;
+    color: hsl(0, 0%, 7%);
+    text-transform: uppercase;
+    font-weight: normal;
+   }
+.newslinksample:hover, .newslinksample.active {
+    color: hsl(171, 100%, 41%);
+    border-left-color: hsl(171, 100%, 41%);
+ 	}
 .studiolink
  {
  	text-decoration: none;

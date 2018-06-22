@@ -6,15 +6,15 @@
 {{ $i := sub ($currentSection | len) 1 }}
 {{/* So we can only show this menu if there are one or more other entries  */}}
 {{ if ge $i 0 }}
-<div class="tabs is-centered">
-	<ul>
-		{{ range $currentSection }}
-		<li>
-			<a href="{{ .URL }}" class="colum
-				newslink{{ if eq $currentPageUrl .URL }} active{{end}}">{{ .Title }}
-			</a>
-		</li>
-		{{ end }}
-	</ul>
-</div>
+<nav class="panel">
+      <p class="panel-heading has-text-weight-bold is-size-4">
+        News List
+      </p>
+      {{ range $currentSection }}
+      <a class="panel-block newslinksample{{ if eq $currentPageUrl .URL }} active{{end}}" 
+      href="{{ .URL }}">
+        {{ .Title }}
+      </a>
+      {{ end }}
+    </nav>
 {{ end }}

@@ -6,11 +6,18 @@
     </div>
   </div>
 </section>
-{{ partial "news-menu.html" . }}
+<!-- {{ partial "news-menu.html" . }} -->
 <div class="hero-body">
   <div class="container has-text-centered">
-    <div class="columns ">
-      <div class="column is-5" data-aos="zoom-in">
+    <nav class="breadcrumb mb-std" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li><a href="{{ .Parent.URL }}">News</a></li>
+        <li class="is-active"><a href="#" aria-current="page">{{ .Title }}</a></li>
+      </ul>
+    </nav>
+    <div class="columns" data-aos="zoom-in">
+      <div class="column is-5" >
         <figure class="image is-4by3">
           <img style="padding: 5px;border: 1px solid #ccc;" src="{{ (trim .Params.featured_image "/") | absURL }}">
         </figure>
