@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      {{ partial "page_title.html" . }}
+    </div>
+  </div>
+</section>
+<div class="container is-fullhd ">
+  <div class="columns">
+    <div class="column is-two-thirds" data-aos="zoom-in">
+      <section class="section">
+        <nav class="breadcrumb mb-std" aria-label="breadcrumbs">
+          <ul>
+            <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+            <li><a href="{{ .Parent.Parent.URL }}">Investors</a></li>
+            <li><a href="{{ .Parent.URL }}">{{ .Parent.Title }}</a></li>
+            <li class="is-active"><a href="#" aria-current="page">{{ .Title }}</a></li>
+          </ul>
+        </nav>
+        <div class="section" style="">
+          <nav class="panel">
+            <p class="panel-heading has-text-weight-bold is-size-4">
+              Report List
+            </p>
+            {{ range .Params.reports }}
+            <a class="panel-block newslinksample"
+              href="{{ (trim .profile_file "/" ) | absURL }}">
+              {{ .name }}  {{ .month }} , {{ .year }}
+            </a>
+            {{ end }}
+            
+          </nav>
+        </div>
+      </section>
+    </div>
+    <div class="column" data-aos="slide-left">
+      {{ partial "investor-menu-single.html" . }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

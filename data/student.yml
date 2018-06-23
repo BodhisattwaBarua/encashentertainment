@@ -1,0 +1,22 @@
+students:
+  - name: SHAHROZE SHAHAB
+    image: images/student1.jpg
+    marks: "96%"
+    yrar: "2018"
+  - name: PRASHANT SINHA
+    image: images/student2.jpg
+    marks: "93%"
+    yrar: "2018"
+  - name: SHASHI SHEKHAR SINGH
+    image: images/student3.jpg
+    marks: "92%"
+    yrar: "2018"
+  - name: KESHABH KEDIA
+    image: images/student4.jpg
+    marks: "90%"
+    yrar: "2018"
+  - name: AWESH AHMAD ANSARI
+    image: images/student5.jpg
+    marks: "90%"
+    yrar: "2018"
+    
