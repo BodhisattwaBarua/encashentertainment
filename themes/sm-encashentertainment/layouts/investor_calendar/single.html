@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      {{ partial "page_title.html" . }}
+    </div>
+  </div>
+</section>
+<div class="container is-fullhd ">
+  <div class="columns">
+    <div class="column is-two-thirds" data-aos="slide-right">
+      <div class="section">
+        {{ partial "investor-calendar-menu-single.html" . }}
+      </div>
+      <div class="column">
+        <div class="box">
+          <p class="title is-5">{{ .Title }} | </p>
+          <p class="subtitle">{{ .Content }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="column" data-aos="slide-left">
+      {{ partial "investor-menu-single.html" . }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

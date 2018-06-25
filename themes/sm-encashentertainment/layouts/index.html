@@ -10,6 +10,19 @@
 	{{ end }}
 </section>
 <section class="section">
+	<div class="container is-fluid ">
+		<h1 class="title has-text-centered is-uppercase is-size-1">
+		About
+		</h1>
+		{{ .Content }}
+		<div class="has-text-centered">
+			<a href="/about">
+				<span class="button is-primary is-outlined">Read More</span>
+			</a>
+		</div>
+	</div>
+</section>
+<section class="section notification">
 	<div class="container is-fluid">
 		<h1 class="title has-text-centered is-uppercase is-size-1">
 		our services
@@ -30,6 +43,46 @@
 					</div>
 					<div class="card-content">
 						<p class=" is-size-6 has-text-black">{{ .content }}</p>
+					</div>
+					<div class="has-text-centered">
+						
+					</div>
+				</div>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
+<section class="hero is-info is-medium is-bold">
+	<div class="hero-index-body">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
+				<a href="/contact">
+					<span class="button is-rounded is-danger is-outlined">Contact Us</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section notification">
+	<div class="container is-fluid">
+		<h1 class="title has-text-centered is-uppercase is-size-1">
+		Client List
+		</h1>
+		<div class="columns is-multiline">
+			{{ range .Site.Data.services.services }}
+			<div class="column is-one-quarter ">
+				<div class="tile is-ancestor">
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<figure class="image is-4by3">
+								<img src="{{(trim .image "/") | absURL }}">
+							</figure>
+							<p class="has-text-centered has-text-weight-bold is-size-5
+							has-text-black"></p>
+							<p class="subtitle has-text-centered"></p>
+						</article>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,28 @@
+{{/* Get the current page's URL so we can compare it to the list below */}}
+{{ $currentPageUrl := .URL }}
+{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
+{{ $required_section := .Section }}
+{{ $required_parent := .Parent.Parent }}
+{{ $currentSection := ( index .Site.Pages ) }}
+{{ $all_pages := .Site.Pages }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<div class="tabs is-centered">
+	<ul>
+		{{ $required_title := .Title }}
+		{{ range $all_pages }}
+		{{ if .Parent}}
+		{{if eq .Parent.Title $required_title}}
+		<li>
+			<a href="{{ .URL }}" class="colum
+				newslink{{ if eq $currentPageUrl .URL }} active{{end}}">{{ .Title }}
+			</a>
+		</li>
+		{{ end }}
+		{{ end }}
+		{{ end }}
+	</ul>
+</div>
+{{ end }}
