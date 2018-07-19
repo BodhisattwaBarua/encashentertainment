@@ -6,6 +6,9 @@
 {{ $i := sub ($currentSection | len) 1 }}
 {{/* So we can only show this menu if there are one or more other entries  */}}
 {{ if ge $i 0 }}
+<div class="columns">
+  <div class="column is-three-quarters">
+    
 <nav class="panel">
       <p class="panel-heading has-text-weight-bold is-size-4 ">
         News List
@@ -17,4 +20,8 @@
       </a>
       {{ end }}
     </nav>
+  </div>
+</div>
+
+
 {{ end }}

@@ -6,20 +6,29 @@
     </div>
   </div>
 </section>
-<div class="container is-fullhd ">
-  <div class="columns">
-    <div class="column is-two-thirds" data-aos="zoom-in">
-      <section class="section">
-        <figure class="image is-3by2">
-          <img style="padding: 5px;border: 1px solid #ccc;" src="{{ (trim .Params.featured_image "/") | absURL }}">
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <nav class="breadcrumb mb-std" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li><a href="{{ .Parent.Parent.URL }}">Movies</a></li>
+        <li><a href="{{ .Parent.URL }}">{{ .Parent.Title }}</a></li>
+        <li class="is-active"><a href="#" aria-current="page">{{ .Title }}</a></li>
+      </ul>
+    </nav>
+    <div class="columns">
+      <div class="column is-5" data-aos="zoom-in">
+        <figure class="image is-4by3">
+          <img style="padding: 5px;border: 3px solid #000;" src="{{ (trim .Params.featured_image "/") | absURL }}">
         </figure>
-        <div style="padding-top: 30px;">
+      </div>
+      <div class="column is-6 is-offset-1" data-aos="slide-left">
+        <div class="">
+          <h2 class="has-text-justified">
           {{ .Content }}
+          </h2>
         </div>
-      </section>
-    </div>
-    <div class="column" data-aos="slide-left">
-      {{ partial "movie-menu-single.html" . }}
+      </div>
     </div>
   </div>
 </div>
