@@ -226,4 +226,42 @@ border-radius: 5px;
 .media-content {
 overflow: hidden;
 }
+
+.panel-heading {
+	/* background: #2BC0E4;  fallback for old browsers
+	background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  Chrome 10-25, Safari 5.1-6
+	background: linear-gradient(to right, #EAECC6, #2BC0E4); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 4px 4px 0 0;
+    color: #000;
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 1.25;
+    padding: .5em .75em;
+}
+.panel-block, .panel-heading, .panel-tabs {
+    border-bottom: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+}
+
+.hero-body1 {
+    color: #fff;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+    background-color: #123;
+}
+
+.footer_1{
+	/*background: #1F1C2C;
+	background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);
+	background: linear-gradient(to right, #928DAB, #1F1C2C);*/
+}
+
+.is-primary{
+	/*background: #757F9A;
+	background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);
+	background: linear-gradient(to right, #D7DDE8, #757F9A);*/
+}
       
